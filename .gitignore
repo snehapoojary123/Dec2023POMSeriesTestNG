@@ -53,7 +53,6 @@ tmp/
 *.bak
 *.swp
 *~.nib
-*.txt
 local.properties
 .loadpath
 .factorypath

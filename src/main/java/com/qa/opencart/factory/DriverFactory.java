@@ -55,11 +55,11 @@ public class DriverFactory {
 			tlDriver.set(new SafariDriver());
 		}
 		else {
-			System.out.println("Please pass the right browser: "+ browserName);
+			System.out.println("Please pass the right browser name: "+ browserName);
 		}
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
-		getDriver().get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url").trim());
 		return getDriver();
 	}
 	
