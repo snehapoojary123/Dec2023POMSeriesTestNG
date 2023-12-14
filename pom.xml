@@ -96,28 +96,28 @@
 
 	<build>
 		<plugins>
-			
+
 			<plugin>
-            <artifactId>maven-clean-plugin</artifactId>
-            <version>3.3.2</version>
-            <executions>
-                <execution>
-                    <id>clean-allure-results</id>
-                    <phase>clean</phase>
-                    <goals>
-                        <goal>clean</goal>
-                    </goals>
-                    <configuration>
-                        <filesets>
-                            <fileset>
-                                <directory>/Dec2023POMSeries/allure-results</directory>
-                            </fileset>
-                        </filesets>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-			
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.3.2</version>
+				<executions>
+					<execution>
+						<id>clean-allure-results</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>/Dec2023POMSeries/allure-results</directory>
+								</fileset>
+							</filesets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -139,11 +139,9 @@
 					<reuseForks>true</reuseForks>
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<suiteXmlFiles>
-						<suiteXmlFile>
-							src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
-
-						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
-					</suiteXmlFiles>
+						
+						<!--<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>> -->					<!--Jenkinsfile-->
+					<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>  					</suiteXmlFiles>
 
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
