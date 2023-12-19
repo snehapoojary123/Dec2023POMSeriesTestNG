@@ -27,6 +27,7 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setBrowserVersion(prop.getProperty("browserversion"));
 			co.setCapability("selenoid:options", new HashMap<String, Object>() {{
+				put("name", prop.getProperty("testcasename"));
 				put("browsername", "chrome");
 				put("enableVNC", true);
 		       
@@ -54,6 +55,7 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setBrowserVersion(prop.getProperty("browserversion"));						
 			fo.setCapability("selenoid:options", new HashMap<String, Object>() {{
+			put("name", prop.getProperty("testcasename"));
 			put("browsername", "firefox");
 		    put("enableVNC", true);
 	       
