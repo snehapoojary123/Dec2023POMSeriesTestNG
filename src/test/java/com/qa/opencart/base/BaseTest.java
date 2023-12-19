@@ -22,7 +22,7 @@ public class BaseTest {
 	DriverFactory df;
 	protected Properties prop;
 	WebDriver driver;
-	String browser = "chrome";
+	//String browser = "chrome";
 	protected LoginPage loginPage; 
 	protected AccountsPage accountsPage;
 	protected SearchPage searchPage;
@@ -31,14 +31,14 @@ public class BaseTest {
 	
 	protected SoftAssert softAssert;
 	
-	@Parameters({ "browser"})
+	@Parameters({"browser","browserversion"})					
 	@BeforeTest
-	public void setup(String browserName) {
+	public void setup(String browserName, String browserVersion) {
 		df = new DriverFactory();
 		prop = df.initializeProperties();
 		if(browserName!=null) {
 			prop.setProperty("browser", browserName);
-			//prop.setProperty("browserversion", browserVersion);
+			prop.setProperty("browserversion", browserVersion);
 			//prop.setProperty("testcasename", testCaseName);
 			
 		}

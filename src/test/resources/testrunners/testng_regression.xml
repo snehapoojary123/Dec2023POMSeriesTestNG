@@ -4,37 +4,46 @@
 <suite name="Opencart App Test Regression Suite" thread-count="4"
 	parallel="tests" verbose="4">
 	
-	<test name="Login Page Test_chrome">
+	<test name="Login Page Test_chrome_119.0">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="119.0" />
+		
 		<classes>
 			<class name="com.qa.opencart.test.LoginPageTest" />
 						
 		</classes>
 	</test>
-	<test name="Login Page Test_firefox">
+ 	<test name="Login Page Test_firefox_117.0">
 		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117.0" />
+		
 		<classes>
 			<class name="com.qa.opencart.test.LoginPageTest" />
 						
 		</classes>
-	</test>
-	<test name="Registration Page Test_chrome">
+	</test>   
+	<test name="Registration Page Test_chrome_109.0">
 	<parameter name="browser" value="chrome" />
+	<parameter name="browserversion" value="109.0" />
+	
 		<classes>
 			<class name="com.qa.opencart.test.RegistrationPageTest" />
 		</classes>
 	</test>
 	
-	<test name="Accounts Page Test_firefox">
+	<test name="Accounts Page Test_firefox_118.0">
 		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="118.0" />
+		
 		<classes>
 			<class name="com.qa.opencart.test.AccountsPageTest" />
 		</classes>
-	</test>
+	</test>  
 	
-	<test name="Product Info Page Test_edge">
-		<parameter name="browser" value="edge" />
-		<parameter name="testcasename" value="Product Page Test" />
+	<test name="Product Info Page Test_chrome_117.0">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="117.0" />
+		
 		<classes>
 			<class name="com.qa.opencart.test.ProductInfoPageTest" />
 		</classes>

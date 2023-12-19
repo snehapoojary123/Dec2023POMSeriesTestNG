@@ -1,5 +1,6 @@
 package com.qa.opencart.factory;
 
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,6 +23,15 @@ public class OptionsManager {
 	public ChromeOptions getChromeOptions() {
 		co = new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
+		
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setBrowserVersion(prop.getProperty("browserversion"));
+			co.setCapability("selenoid:options", new HashMap<String, Object>() {{
+				put("browsername", "chrome");
+				put("enableVNC", true);
+		       
+		    }});
+		}
 		if (Boolean.parseBoolean(prop.getProperty("headless").trim().toLowerCase())) {
 			System.out.println("Running chrome in headless..");
 			co.addArguments("--headless");
@@ -41,6 +51,14 @@ public class OptionsManager {
 	
 	public FirefoxOptions getFirefoxOptions() {
 		fo = new FirefoxOptions();
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setBrowserVersion(prop.getProperty("browserversion"));						
+			fo.setCapability("selenoid:options", new HashMap<String, Object>() {{
+			put("browsername", "firefox");
+		    put("enableVNC", true);
+	       
+	    }});
+		}
 		if (Boolean.parseBoolean(prop.getProperty("headless").trim().toLowerCase())) {
 			System.out.println("Running firefox in headless..");
 			fo.addArguments("--headless");
