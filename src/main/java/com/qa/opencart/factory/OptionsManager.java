@@ -52,7 +52,7 @@ public class OptionsManager {
 	
 	public FirefoxOptions getFirefoxOptions() {
 		fo = new FirefoxOptions();
-		fo.addArguments("--remote-allow-origins=*");
+		//fo.addArguments("--remote-allow-origins=*");
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setBrowserVersion(prop.getProperty("browserversion"));						
 			fo.setCapability("selenoid:options", new HashMap<String, Object>() {{
