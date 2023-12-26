@@ -2,6 +2,8 @@ package com.qa.opencart.test;
 
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.MDC;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -10,6 +12,7 @@ import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 
 public class ProductInfoPageTest extends BaseTest{
+	//private final Logger logger = Logger.getLogger(ProductInfoPageTest.class);
 	
 	@BeforeClass
 	public void productInfoPageSetup() {
@@ -34,6 +37,8 @@ public class ProductInfoPageTest extends BaseTest{
 		searchPage = accountsPage.doSearch(productKey);
 		productInfoPage = searchPage.selectProduct(ProductName);
 		Assert.assertEquals(productInfoPage.getProductImageCount(), imgCount);
+	//	MDC.put("testClassName", this.getClass().getSimpleName());
+		//logger.info("This is the logger for ProductInfoPageTest...");
 		
 		
 	}
@@ -81,7 +86,7 @@ public class ProductInfoPageTest extends BaseTest{
 		softAssert.assertTrue(actSuccMsg.indexOf(ProductName)>0);
 		softAssert.assertEquals(actSuccMsg, "Success: You have added "+ProductName + " to your shopping cart!");
 		softAssert.assertAll();
-		
+		//logger.info("Product added: "+ProductName);
 	}
 	
 	

@@ -2,6 +2,8 @@ package com.qa.opencart.test;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.MDC;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -10,9 +12,11 @@ import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
 
-import net.bytebuddy.description.annotation.AnnotationList.Empty;
+
 
 public class AccountsPageTest extends BaseTest {
+	
+	//private final Logger logger = Logger.getLogger(AccountsPageTest.class);
 
 	@BeforeClass
 	public void accountPageSetup() {
@@ -24,6 +28,8 @@ public class AccountsPageTest extends BaseTest {
 		String actTitle = accountsPage.getAccountPageTitle();
 		String expTitle = AppConstants.ACCOUNT_PAGE_TITLE;
 		Assert.assertEquals(actTitle, expTitle);
+		//MDC.put("testClassName", this.getClass().getSimpleName());
+		//logger.info("This is a logger for Accounts Page....");
 
 	}
 
@@ -58,8 +64,8 @@ public class AccountsPageTest extends BaseTest {
 	@Test
 	public void accountHeadersValueTest() {
 		List<String> accHeaderList = accountsPage.getAccountHearderList();
-		System.out.println("actual account pahe header list: "+ accHeaderList);
-		System.out.println("expected account pahe header list: "+ AppConstants.EXP_ACCOUNTS_PAGE_HEADER_LIST);
+		//logger.info("actual account pahe header list: "+ accHeaderList);
+		//logger.info("expected account pahe header list: "+ AppConstants.EXP_ACCOUNTS_PAGE_HEADER_LIST);
 		Assert.assertEquals(accHeaderList, AppConstants.EXP_ACCOUNTS_PAGE_HEADER_LIST);
 
 	}
@@ -78,6 +84,7 @@ public class AccountsPageTest extends BaseTest {
 	public void searchProductCountTest(String searchKey) {
 		searchPage = accountsPage.doSearch(searchKey);
 		Assert.assertTrue(searchPage.searchPageProductCount()>0);
+		//logger.info("Performing product search for: "+searchKey);
 		
 	}
 	

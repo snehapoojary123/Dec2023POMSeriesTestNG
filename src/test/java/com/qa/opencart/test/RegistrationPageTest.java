@@ -2,6 +2,8 @@ package com.qa.opencart.test;
 
 import java.util.Random;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.MDC;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -11,9 +13,9 @@ import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.utils.ExcelUtils;
 
-public class RegistrationPageTest extends BaseTest
-
-{
+public class RegistrationPageTest extends BaseTest{
+	
+	//private final Logger logger = Logger.getLogger(RegistrationPageTest.class);
 	
 	public String getRandomEmail() {
 		Random random = new Random();
@@ -35,6 +37,8 @@ public class RegistrationPageTest extends BaseTest
 	@Test(dataProvider = "getRegTestData")
 	public void userRegistrationTest(String fname,String lname,String telephone,String password,String subscribe) {
 		Assert.assertTrue(registrationPage.registerUser(fname,lname,getRandomEmail(),telephone,password,subscribe));
+		//MDC.put("testClassName", this.getClass().getSimpleName());
+		//logger.info("This is a logger from RegistrationPageTest...");
 	}
 
 }
