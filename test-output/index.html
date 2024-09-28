@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Opencart_App_Test_Regression_Suite" class="panel Opencart_App_Test_Regression_Suite">
+        </div> <!-- panel Opencart_App_Test_Regression_Suite -->
+        <div panel-name="test-xml-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\sneha\Sneha Documents\Training\Selenium\Naveen Automation\Workspace1\Dec2023POMSeries\src\test\resources\testrunners\testng_regression.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Opencart App Test Regression Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;4&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.qa.opencart.listeners.ExtentReportListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.opencart.listeners.TestAllureListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.opencart.listeners.TestAllureListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Login Page Test_chrome_119.0&quot; verbose=&quot;4&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;testcasename&quot; value=&quot;Login Page Test Chrome&quot;/&gt;
+    &lt;parameter name=&quot;browserversion&quot; value=&quot;119.0&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.test.LoginPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login Page Test_chrome_119.0 --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Login Page Test_firefox_117.0&quot; verbose=&quot;4&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;testcasename&quot; value=&quot;Login Page Test Firefox&quot;/&gt;
+    &lt;parameter name=&quot;browserversion&quot; value=&quot;117.0&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.test.LoginPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login Page Test_firefox_117.0 --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Registration Page Test_chrome_109.0&quot; verbose=&quot;4&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;testcasename&quot; value=&quot;Registration Page Test Chrome&quot;/&gt;
+    &lt;parameter name=&quot;browserversion&quot; value=&quot;109.0&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.test.RegistrationPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Registration Page Test_chrome_109.0 --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Accounts Page Test_firefox_118.0&quot; verbose=&quot;4&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;testcasename&quot; value=&quot;Accounts Page Test Firefox&quot;/&gt;
+    &lt;parameter name=&quot;browserversion&quot; value=&quot;118.0&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.test.AccountsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Accounts Page Test_firefox_118.0 --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Product Info Page Test_chrome_117.0&quot; verbose=&quot;4&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;testcasename&quot; value=&quot;Product Info Page Test Chrome&quot;/&gt;
+    &lt;parameter name=&quot;browserversion&quot; value=&quot;117.0&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.test.ProductInfoPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Product Info Page Test_chrome_117.0 --&gt;
+&lt;/suite&gt; &lt;!-- Opencart App Test Regression Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Opencart App Test Regression Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Login Page Test_chrome_119.0 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Login Page Test_firefox_117.0 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Registration Page Test_chrome_109.0 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Accounts Page Test_firefox_118.0 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Product Info Page Test_chrome_117.0 (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Opencart App Test Regression Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Opencart App Test Regression Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Opencart_App_Test_Regression_Suite');
+function tableData_Opencart_App_Test_Regression_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['Opencart_App_Test_Regression_Suite']= { tableData: data, tableDiv: 'times-div-Opencart_App_Test_Regression_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 0 ms</span>
+              <div id="times-div-Opencart_App_Test_Regression_Suite">
+              </div> <!-- times-div-Opencart_App_Test_Regression_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Opencart App Test Regression Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Opencart_App_Test_Regression_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(chrome, 119.0, Login Page Test Chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(firefox, 117.0, Login Page Test Firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(chrome, 109.0, Registration Page Test Chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(firefox, 118.0, Accounts Page Test Firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">registerPageSetup</span>
+                <span class="method-start">5738 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginPageTitleTest</span>
+                <span class="method-start">7671 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginPageURLTest</span>
+                <span class="method-start">8507 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ForgotPasswordLinkExistsTest</span>
+                <span class="method-start">8756 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTest</span>
+                <span class="method-start">9036 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginPageTitleTest</span>
+                <span class="method-start">11063 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginPageURLTest</span>
+                <span class="method-start">11112 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ForgotPasswordLinkExistsTest</span>
+                <span class="method-start">11234 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">accountPageSetup</span>
+                <span class="method-start">11695 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest</span>
+                <span class="method-start">12272 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">userRegistrationTest(shweeta, poojary, 8765456545, shweeta, yes)</span>
+                <span class="method-start">13203 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">13465 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">accountHeadersCountTest</span>
+                <span class="method-start">13886 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(chrome, 117.0, Product Info Page Test Chrome)</span>
+                <span class="method-start">14061 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">accountHeadersValueTest</span>
+                <span class="method-start">14128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">accountsPageTitleTest</span>
+                <span class="method-start">14265 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">accountsPageURLTest</span>
+                <span class="method-start">14303 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14329 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">logoutLinkExistsTest</span>
+                <span class="method-start">14347 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchProductCountTest(Macbook)</span>
+                <span class="method-start">15596 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchProductCountTest(iMac)</span>
+                <span class="method-start">17172 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">productInfoPageSetup</span>
+                <span class="method-start">18607 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">searchProductCountTest(Apple)</span>
+                <span class="method-start">18613 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchProductCountTest(Samsung)</span>
+                <span class="method-start">20180 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">userRegistrationTest(shobha, poojary, 2765458545, shobha, no)</span>
+                <span class="method-start">21053 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToCartTest(Macbook, MacBook Pro)</span>
+                <span class="method-start">21128 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">searchTextExistsTest</span>
+                <span class="method-start">21684 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest(Macbook, MacBook Pro)</span>
+                <span class="method-start">21911 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest(Macbook, MacBook Air)</span>
+                <span class="method-start">24983 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToCartTest(Macbook, MacBook Air)</span>
+                <span class="method-start">25413 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">userRegistrationTest(sanjeeva, poojary, 2725458545, sanjeeva, yes)</span>
+                <span class="method-start">27306 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest(iMac, iMac)</span>
+                <span class="method-start">28303 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToCartTest(iMac, iMac)</span>
+                <span class="method-start">29167 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest(Apple, Apple Cinema 30")</span>
+                <span class="method-start">30871 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToCartTest(Samsung, Samsung SyncMaster 941BW)</span>
+                <span class="method-start">32781 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">32891 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest(Samsung, Samsung SyncMaster 941BW)</span>
+                <span class="method-start">33664 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest(Samsung, Samsung Galaxy Tab 10.1)</span>
+                <span class="method-start">37841 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToCartTest(Samsung, Samsung Galaxy Tab 10.1)</span>
+                <span class="method-start">38740 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">40553 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">productDescPresentTest(Macbook, MacBook Pro)</span>
+                <span class="method-start">42179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productDescPresentTest(Macbook, MacBook Air)</span>
+                <span class="method-start">44297 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productDescPresentTest(iMac, iMac)</span>
+                <span class="method-start">46400 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productDescPresentTest(Samsung, Samsung SyncMaster 941BW)</span>
+                <span class="method-start">48486 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productDescPresentTest(Samsung, Samsung Galaxy Tab 10.1)</span>
+                <span class="method-start">50634 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productImagesCountTest(Macbook, MacBook Pro, 4)</span>
+                <span class="method-start">52782 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productImagesCountTest(Macbook, MacBook Air, 4)</span>
+                <span class="method-start">55012 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productImagesCountTest(iMac, iMac, 3)</span>
+                <span class="method-start">57260 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productImagesCountTest(Apple, Apple Cinema 30", 6)</span>
+                <span class="method-start">59324 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productImagesCountTest(Samsung, Samsung SyncMaster 941BW, 1)</span>
+                <span class="method-start">61859 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productImagesCountTest(Samsung, Samsung Galaxy Tab 10.1, 7)</span>
+                <span class="method-start">63858 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productInfoTest</span>
+                <span class="method-start">66088 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">68534 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
