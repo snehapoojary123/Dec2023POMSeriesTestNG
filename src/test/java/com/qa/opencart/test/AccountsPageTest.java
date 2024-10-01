@@ -110,7 +110,7 @@ public class AccountsPageTest extends BaseTest {
 			Assert.assertEquals(actHeaderValue, productSeries);
 		}
 		else {
-			System.out.println("No search results found.....");
+			System.out.println("No search result found.....");
 		}
 		
 		
